@@ -41,30 +41,17 @@ export default async function AuthorsPage() {
         <div className="container mx-auto px-6 md:px-12 max-w-7xl space-y-12">
           
           {/* Header Card Container */}
-          <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-charcoal/10 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-            <div className="space-y-3 max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-coral/10 text-coral text-xs font-bold rounded-full border border-coral/20 uppercase tracking-widest font-manrope">
+          <div className="bg-white rounded-3xl p-8 md:p-10 border border-slate-200 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+            <div className="space-y-3 max-w-3xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-blue-700 text-xs font-mono font-bold rounded-full border border-blue-200 uppercase tracking-widest">
                 <Users className="w-3.5 h-3.5" /> The Creators
               </div>
-              <h1 className="text-4xl md:text-5xl font-newsreader font-bold text-charcoal leading-tight">
-                Featured <span className="text-coral italic font-normal">Authors</span>
+              <h1 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
+                Featured <span className="text-blue-600 italic font-normal">Authors</span>
               </h1>
-              <p className="text-xs md:text-sm font-manrope text-charcoal/60 leading-relaxed">
+              <p className="text-xs md:text-sm text-slate-600 leading-relaxed font-medium">
                 Meet the visionary thinkers, researchers, and essayists shaping contemporary thought and literature in our digital library.
               </p>
-            </div>
-
-            {/* Author Stats Badge */}
-            <div className="bg-gradient-to-br from-charcoal to-slate-900 text-paper-beige px-6 py-5 rounded-2xl border border-charcoal/20 shadow-md flex items-center gap-4 flex-shrink-0">
-              <div className="w-10 h-10 rounded-xl bg-coral/20 text-coral flex items-center justify-center font-bold">
-                <Award className="w-5 h-5" />
-              </div>
-              <div>
-                <div className="text-2xl font-newsreader font-bold">{authorData.length} Authors</div>
-                <div className="text-[10px] font-manrope font-semibold text-paper-beige/40 uppercase tracking-widest">
-                  {books.length} Published Volumes
-                </div>
-              </div>
             </div>
           </div>
 
