@@ -43,25 +43,27 @@ export default function BookCard({ id, title, author, price, category, image }: 
       </div>
 
       {/* Book Cover Container */}
-      <Link href={`/products/${id}`} className="block relative mb-3 group/cover overflow-hidden rounded-xl bg-slate-100 border border-slate-200 aspect-[3/4]">
-        {image ? (
-          <img
-            src={image}
-            alt={title}
-            className="w-full h-full object-cover group-hover/cover:scale-105 transition-transform duration-500"
-          />
-        ) : (
-          <div className="w-full h-full flex flex-col items-center justify-center p-4 text-center text-slate-400 bg-slate-100">
-            <BookOpen className="w-8 h-8 mb-2 opacity-40 text-blue-600" />
-            <span className="text-xs font-bold italic line-clamp-2 text-slate-600">{title}</span>
+      <div className="flex justify-center mb-3">
+        <Link href={`/products/${id}`} className="block relative group/cover overflow-hidden rounded-xl bg-slate-100 border border-slate-200 aspect-[3/4] max-h-64 w-full max-w-[190px] shadow-sm">
+          {image ? (
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-full object-cover group-hover/cover:scale-105 transition-transform duration-500"
+            />
+          ) : (
+            <div className="w-full h-full flex flex-col items-center justify-center p-4 text-center text-slate-400 bg-slate-100">
+              <BookOpen className="w-8 h-8 mb-2 opacity-40 text-blue-600" />
+              <span className="text-xs font-bold italic line-clamp-2 text-slate-600">{title}</span>
+            </div>
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover/cover:opacity-100 transition-opacity flex items-end p-3">
+            <span className="text-[10px] font-extrabold text-blue-300 uppercase tracking-widest flex items-center gap-1">
+              <Sparkles className="w-3 h-3 text-blue-400" /> Read Preview
+            </span>
           </div>
-        )}
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover/cover:opacity-100 transition-opacity flex items-end p-3">
-          <span className="text-[10px] font-extrabold text-blue-300 uppercase tracking-widest flex items-center gap-1">
-            <Sparkles className="w-3 h-3 text-blue-400" /> Read Preview
-          </span>
-        </div>
-      </Link>
+        </Link>
+      </div>
 
       {/* Book Information */}
       <div className="flex-grow flex flex-col justify-between space-y-3">

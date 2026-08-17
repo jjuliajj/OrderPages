@@ -7,24 +7,28 @@ export default async function FeaturedBooks() {
   const books = await getBooks();
 
   return (
-    <section className="py-12 bg-[#F8F9FA] font-sans">
-      <div className="container mx-auto px-4 sm:px-8 md:px-12 max-w-5xl space-y-6">
+    <section className="py-12 bg-[#F8FAFC] font-sans">
+      <div className="container mx-auto px-4 sm:px-8 md:px-12 max-w-7xl space-y-8">
         
         {/* Header */}
-        <div className="bg-white p-5 rounded-2xl border border-[#111827]/15 shadow-xs flex justify-between items-center font-mono">
+        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 font-sans">
           <div className="flex items-center gap-2">
-            <Command className="w-5 h-5 text-[#3B82F6]" />
-            <h2 className="font-bold text-lg text-[#111827] uppercase">
-              LINEAR ACCORDION INDEX ({books.length})
+            <Command className="w-5 h-5 text-blue-600" />
+            <h2 className="font-bold text-lg text-slate-900 uppercase">
+              Featured Linear Releases ({books.length})
             </h2>
           </div>
-          <span className="text-xs font-bold text-[#3B82F6] bg-[#3B82F6]/10 px-3 py-1 rounded-full uppercase">
-            CLICK TO EXPAND
-          </span>
+          <Link
+            href="/collections"
+            className="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 uppercase tracking-wider transition-colors"
+          >
+            <span>Browse Full Catalogue</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
 
-        {/* Linear Accordion List Rows */}
-        <div className="space-y-3">
+        {/* 4-Column Product Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {books.map((book) => (
             <BookCard key={book.id} {...book} image={book.cover_url} description={book.description} />
           ))}
