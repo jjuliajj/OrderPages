@@ -37,9 +37,6 @@ export default function BookCard({ id, title, author, price, category, image }: 
         <span className="bg-blue-50 text-blue-700 text-[10px] font-mono font-bold px-2 py-0.5 rounded border border-blue-200">
           VECTOR #{id.slice(0, 4)}
         </span>
-        <span className="text-[10px] font-bold text-slate-600 bg-slate-100 px-2 py-0.5 rounded uppercase border border-slate-200">
-          {category || "VECTOR"}
-        </span>
       </div>
 
       {/* Vector Asset Image Container (Adaptive 4:3 with ambient backdrop) */}

@@ -18,7 +18,6 @@ export default function Footer() {
             <h4 className="text-xs font-bold text-[#FF5500] uppercase tracking-widest mb-3">Index Directory</h4>
             <ul className="space-y-1.5 text-xs text-white/80">
               <li><Link href="/collections" className="hover:text-[#FF5500]">Vector Collections</Link></li>
-              <li><Link href="/genres" className="hover:text-[#FF5500]">Design Categories</Link></li>
               <li><Link href="/authors" className="hover:text-[#FF5500]">Designers & Creators</Link></li>
             </ul>
           </div>

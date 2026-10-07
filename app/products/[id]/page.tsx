@@ -6,7 +6,7 @@ import ProductImageFrame from "@/components/ProductImageFrame";
 import { getBook } from "@/lib/api";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, Layers, User, Tag } from "lucide-react";
+import { ArrowLeft, Layers, User, Tag, Sparkles } from "lucide-react";
 import type { Metadata } from "next";
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
@@ -117,9 +117,9 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
             {/* Right: Product Meta & Info */}
             <div className="md:col-span-6 lg:col-span-6 space-y-6">
               <div>
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-coral/10 text-coral text-xs font-manrope font-bold uppercase tracking-widest rounded-full mb-3">
-                  <Tag className="w-3 h-3" />
-                  {book.category || "Vector Design"}
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#111827] text-white text-[11px] font-mono font-bold uppercase tracking-wider rounded-md mb-3 shadow-xs">
+                  <Sparkles className="w-3.5 h-3.5 text-[#3B82F6]" />
+                  Verified Digital Vector Asset
                 </div>
                 
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-newsreader font-bold text-charcoal leading-tight mb-2">

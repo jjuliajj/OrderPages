@@ -74,9 +74,7 @@ export default function Navbar() {
 
   const navItems = [
     { label: "Vector Index", href: "/collections" },
-    { label: "Categories", href: "/genres" },
     { label: "Designers", href: "/authors" },
-    { label: "System API", href: "/about" },
   ];
 
   return (

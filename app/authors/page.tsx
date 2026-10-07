@@ -20,14 +20,11 @@ export default async function AuthorsPage() {
   
   const authorData = authorNames.map((name) => {
     const authorBooks = books.filter((b) => b.author === name);
-    // Find primary genre/category of author
-    const categories = authorBooks.map(b => b.category).filter(Boolean);
-    const mainCategory = categories[0] || "Featured Designer";
 
     return {
       name,
       avatar: getAuthorAvatar(name),
-      category: mainCategory,
+      category: "Vector Artist & Studio",
       count: authorBooks.length,
       books: authorBooks,
     };
@@ -77,7 +74,7 @@ export default async function AuthorsPage() {
                         {author.category}
                       </span>
                       <span className="text-xs font-manrope font-bold text-coral bg-paper-beige px-2.5 py-0.5 rounded-full shadow-sm">
-                        {author.count} {author.count === 1 ? 'Book' : 'Books'}
+                        {author.count} {author.count === 1 ? 'Asset' : 'Assets'}
                       </span>
                     </div>
                   </div>

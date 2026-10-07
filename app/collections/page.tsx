@@ -35,8 +35,6 @@ export default async function CollectionsPage({
     );
   }
 
-  const categories = Array.from(new Set(filteredBooks.map((b) => b.category).filter(Boolean)));
-
 
   return (
     <main className="flex min-h-screen flex-col bg-[#F8FAFC] font-sans text-slate-900">
@@ -58,25 +56,21 @@ export default async function CollectionsPage({
             </p>
           </div>
 
-          <div className="space-y-16">
-            {categories.map((category) => (
-              <div key={category} className="space-y-6">
-                <div className="flex items-baseline justify-between border-b border-slate-200 pb-4">
-                  <h2 className="text-2xl font-bold text-slate-900 flex items-center gap-2">
-                    <span className="w-2.5 h-6 bg-blue-600 rounded-sm block" />
-                    {category}
-                  </h2>
-                  <span className="font-mono text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-200 uppercase">
-                    {filteredBooks.filter(b => b.category === category).length} Volumes
-                  </span>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                  {filteredBooks.filter((b) => b.category === category).map((book) => (
-                    <BookCard key={book.id} {...book} image={book.cover_url} description={book.description} />
-                  ))}
-                </div>
-              </div>
-            ))}
+          <div className="space-y-8">
+            <div className="flex items-baseline justify-between border-b border-slate-200 pb-4">
+              <h2 className="text-2xl font-bold text-slate-900 flex items-center gap-2">
+                <span className="w-2.5 h-6 bg-blue-600 rounded-sm block" />
+                All Vector Assets
+              </h2>
+              <span className="font-mono text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-200 uppercase">
+                {filteredBooks.length} Assets
+              </span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {filteredBooks.map((book) => (
+                <BookCard key={book.id} {...book} image={book.cover_url} description={book.description} />
+              ))}
+            </div>
           </div>
         </div>
       </section>
