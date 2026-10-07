@@ -8,8 +8,8 @@ import { Users, BookOpen, ArrowRight, Sparkles, Award } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Featured Authors & Visionary Creators",
-  description: "Meet the brilliant minds, essayists, and thinkers behind our digital e-book library collection.",
+  title: "Featured Designers & Creative Studios",
+  description: "Meet the vector artists, illustrators, and design studios behind our digital asset collections.",
 };
 
 export default async function AuthorsPage() {
@@ -22,7 +22,7 @@ export default async function AuthorsPage() {
     const authorBooks = books.filter((b) => b.author === name);
     // Find primary genre/category of author
     const categories = authorBooks.map(b => b.category).filter(Boolean);
-    const mainCategory = categories[0] || "Featured Author";
+    const mainCategory = categories[0] || "Featured Designer";
 
     return {
       name,
@@ -44,13 +44,13 @@ export default async function AuthorsPage() {
           <div className="bg-white rounded-3xl p-8 md:p-10 border border-slate-200 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
             <div className="space-y-3 max-w-3xl">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-blue-700 text-xs font-mono font-bold rounded-full border border-blue-200 uppercase tracking-widest">
-                <Users className="w-3.5 h-3.5" /> The Creators
+                <Users className="w-3.5 h-3.5" /> Creative Studios
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
-                Featured <span className="text-blue-600 italic font-normal">Authors</span>
+                Featured <span className="text-blue-600 italic font-normal">Designers</span>
               </h1>
               <p className="text-xs md:text-sm text-slate-600 leading-relaxed font-medium">
-                Meet the visionary thinkers, researchers, and essayists shaping contemporary thought and literature in our digital library.
+                Meet the visionary vector artists and illustrators crafting high-impact mascot logos, commercial graphics, and print-ready designs.
               </p>
             </div>
           </div>

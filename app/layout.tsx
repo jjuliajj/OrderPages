@@ -20,19 +20,19 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.orderpages.com"
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "OrderPages | Swiss Modernist Editorial Folios & Digital Books",
+    default: "OrderPages | Premium Vector Assets & Editable Design Files",
     template: "%s | OrderPages",
   },
-  description: "OrderPages is a minimalist Swiss editorial platform offering structured digital folios, high-contrast book collections, and EPUB downloads.",
-  keywords: ["OrderPages", "Swiss Modernist Books", "Editorial Journal", "Digital Folios"],
+  description: "OrderPages delivers high-contrast scalable vector artwork, CorelDRAW (CDR), Adobe Illustrator (AI), and EPS design packages for logo, apparel, branding, and print projects.",
+  keywords: ["OrderPages", "Vector Assets", "CorelDRAW CDR", "Illustrator AI", "EPS Vector", "Mascot Logos", "Print Graphics"],
   icons: {
     icon: "/icon.svg",
     shortcut: "/icon.svg",
     apple: "/icon.svg",
   },
   openGraph: {
-    title: "OrderPages | Swiss Modernist Editorial Folios",
-    description: "Swiss minimalist editorial folios and digital reading at OrderPages.",
+    title: "OrderPages | Premium Vector Assets & Editable Design Files",
+    description: "Scalable vector artwork, CorelDRAW (CDR), Adobe Illustrator (AI) & EPS design archives at OrderPages.",
     url: siteUrl,
     siteName: "OrderPages",
     images: [{ url: "/icon.svg", width: 1200, height: 630, alt: "OrderPages" }],

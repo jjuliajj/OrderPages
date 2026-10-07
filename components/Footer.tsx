@@ -11,28 +11,28 @@ export default function Footer() {
               <span className="font-extrabold text-2xl tracking-tighter uppercase text-white">OrderPages</span>
             </div>
             <p className="text-xs text-white/70 leading-relaxed max-w-md">
-              Swiss modernist editorial publishing and structured digital folios. High-contrast EPUB reading for minimalist readers.
+              Swiss modernist design studio and structured vector archives. High-precision CorelDRAW (CDR), Illustrator (AI), and EPS design assets for creators, apparel, and print.
             </p>
           </div>
           <div>
             <h4 className="text-xs font-bold text-[#FF5500] uppercase tracking-widest mb-3">Index Directory</h4>
             <ul className="space-y-1.5 text-xs text-white/80">
-              <li><Link href="/collections" className="hover:text-[#FF5500]">Page Collections</Link></li>
-              <li><Link href="/genres" className="hover:text-[#FF5500]">Genres</Link></li>
-              <li><Link href="/authors" className="hover:text-[#FF5500]">Authors Registry</Link></li>
+              <li><Link href="/collections" className="hover:text-[#FF5500]">Vector Collections</Link></li>
+              <li><Link href="/genres" className="hover:text-[#FF5500]">Design Categories</Link></li>
+              <li><Link href="/authors" className="hover:text-[#FF5500]">Designers & Creators</Link></li>
             </ul>
           </div>
           <div>
-            <h4 className="text-xs font-bold text-[#FF5500] uppercase tracking-widest mb-3">Folio Support</h4>
+            <h4 className="text-xs font-bold text-[#FF5500] uppercase tracking-widest mb-3">Asset Support</h4>
             <ul className="space-y-1.5 text-xs text-white/80">
               <li><Link href="/privacy" className="hover:text-[#FF5500]">Privacy Protocol</Link></li>
-              <li><Link href="/terms" className="hover:text-[#FF5500]">Terms & Grid Rules</Link></li>
+              <li><Link href="/terms" className="hover:text-[#FF5500]">Licensing & Terms</Link></li>
               <li><Link href="/contact" className="hover:text-[#FF5500]">Contact Desk</Link></li>
             </ul>
           </div>
         </div>
         <div className="pt-6 text-center text-xs text-white/50">
-          © {new Date().getFullYear()} OrderPages Editorial Journal. All rights reserved.
+          © {new Date().getFullYear()} OrderPages Design Studio & Vector Assets. All rights reserved.
         </div>
       </div>
     </footer>

@@ -73,9 +73,9 @@ export default function Navbar() {
   }, [searchQuery, allBooks]);
 
   const navItems = [
-    { label: "Linear Index", href: "/collections" },
-    { label: "Genres", href: "/genres" },
-    { label: "Authors", href: "/authors" },
+    { label: "Vector Index", href: "/collections" },
+    { label: "Categories", href: "/genres" },
+    { label: "Designers", href: "/authors" },
     { label: "System API", href: "/about" },
   ];
 
@@ -97,7 +97,7 @@ export default function Navbar() {
             </span>
             <span className="bg-[#3B82F6] text-white text-[8px] font-bold px-1.5 py-0.5 rounded">v3.0</span>
           </div>
-          <span className="text-[9px] font-mono font-bold tracking-widest text-[#111827]/70 uppercase mt-0.5">Silicon Valley Linear UI</span>
+          <span className="text-[9px] font-mono font-bold tracking-widest text-[#111827]/70 uppercase mt-0.5">Digital Vector & Design Assets</span>
         </div>
       </Link>
 
@@ -107,7 +107,7 @@ export default function Navbar() {
           <Search className="absolute left-3.5 w-4 h-4 text-[#3B82F6]" />
           <input
             type="text"
-            placeholder="Cmd + K to search ISBN, title, author..."
+            placeholder="Cmd + K to search vector files, AI, EPS, CDR..."
             value={searchQuery}
             onFocus={handleSearchFocus}
             onChange={(e) => setSearchQuery(e.target.value)}
@@ -125,12 +125,12 @@ export default function Navbar() {
           <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-[#111827]/20 rounded-xl shadow-xl overflow-hidden z-50 p-2 font-mono">
             {isLoadingBooks ? (
               <div className="p-3 text-center text-xs text-[#111827] flex items-center justify-center gap-2">
-                <Loader2 className="w-4 h-4 animate-spin text-[#3B82F6]" /> Querying ISBN database...
+                <Loader2 className="w-4 h-4 animate-spin text-[#3B82F6]" /> Querying vector database...
               </div>
             ) : searchResults.length > 0 ? (
               <div className="space-y-1">
                 <div className="px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-[#3B82F6]">
-                  ISBN Index ({searchResults.length})
+                  Vector Index ({searchResults.length})
                 </div>
                 {searchResults.map((book) => (
                   <Link
@@ -142,14 +142,14 @@ export default function Navbar() {
                     }}
                     className="flex items-center gap-3 p-2 hover:bg-[#F8F9FA] rounded-lg transition-colors group"
                   >
-                    <div className="w-8 aspect-[9/14] bg-[#111827] rounded overflow-hidden flex-shrink-0 border border-[#111827]/20">
-                      {book.cover_url && <img src={book.cover_url} alt={book.title} className="w-full h-full object-cover" />}
+                    <div className="w-12 aspect-[4/3] bg-[#111827] rounded-lg overflow-hidden flex-shrink-0 border border-[#111827]/20 p-0.5">
+                      {book.cover_url && <img src={book.cover_url} alt={book.title} className="w-full h-full object-contain" />}
                     </div>
                     <div className="flex-grow min-w-0">
                       <div className="text-xs font-bold text-[#111827] truncate group-hover:text-[#3B82F6]">
                         {book.title}
                       </div>
-                      <div className="text-[10px] text-[#111827]/60 truncate font-mono">ISBN: 978-0-123-{book.id}</div>
+                      <div className="text-[10px] text-[#111827]/60 truncate font-mono">Format: AI • EPS • CDR • Vector</div>
                     </div>
                   </Link>
                 ))}

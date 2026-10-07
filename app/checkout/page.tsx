@@ -87,7 +87,7 @@ export default function CheckoutPage() {
               <div>
                 <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-4 flex items-center gap-2 border-b border-slate-100 pb-3">
                   <span className="w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold font-mono flex items-center justify-center flex-shrink-0">1</span>
-                  Contact & EPUB Delivery Details
+                  Contact & Digital Asset Delivery Details
                 </h2>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
@@ -108,7 +108,7 @@ export default function CheckoutPage() {
                     />
                   </div>
                   <div className="col-span-1 sm:col-span-2">
-                    <label className="block text-xs font-bold text-slate-600 mb-1">Email Address (for EPUB Delivery)</label>
+                    <label className="block text-xs font-bold text-slate-600 mb-1">Email Address (for Digital Asset Archive Delivery)</label>
                     <input 
                       type="email" 
                       placeholder="jane.doe@example.com"
@@ -149,7 +149,7 @@ export default function CheckoutPage() {
                     <Sparkles className="w-5 h-5 text-blue-400" /> Order Overview
                   </h3>
                   <span className="text-xs font-mono font-semibold text-slate-400">
-                    {cartCount} {cartCount === 1 ? 'Volume' : 'Volumes'}
+                    {cartCount} {cartCount === 1 ? 'Design Asset' : 'Design Assets'}
                   </span>
                 </div>
 
@@ -157,9 +157,9 @@ export default function CheckoutPage() {
                 <div className="space-y-3 max-h-48 overflow-y-auto pr-1">
                   {fullCartItems.map(item => (
                     <div key={item.id} className="flex items-center gap-3 bg-slate-900 p-2 rounded-xl border border-slate-800">
-                      <div className="w-9 aspect-[9/16] bg-slate-950 rounded overflow-hidden flex-shrink-0 border border-slate-800">
+                      <div className="w-12 aspect-[4/3] bg-slate-950 rounded-lg overflow-hidden flex-shrink-0 border border-slate-800 p-0.5">
                         {item.cover_url ? (
-                          <img src={item.cover_url} alt={item.title} className="w-full h-full object-cover" />
+                          <img src={item.cover_url} alt={item.title} className="w-full h-full object-contain" />
                         ) : (
                           <div className="w-full h-full flex items-center justify-center text-slate-600">
                             <BookOpen className="w-3 h-3 text-blue-400" />
@@ -184,7 +184,7 @@ export default function CheckoutPage() {
                     <span className="font-mono font-bold text-white">${cartTotal.toFixed(2)}</span>
                   </div>
                   <div className="flex justify-between text-slate-300">
-                    <span>EPUB Digital Delivery</span>
+                    <span>Instant Digital Archive Delivery</span>
                     <span className="text-emerald-400 font-bold uppercase text-[10px]">Complimentary</span>
                   </div>
                   <div className="flex justify-between items-baseline pt-3 border-t border-slate-800">

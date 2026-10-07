@@ -5,8 +5,8 @@ import BookCard from "@/components/BookCard";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Special Collections & Digital Archives",
-  description: "Browse our complete library catalog of curated EPUB e-books, rare editions, and literature collections.",
+  title: "Vector Collections & Digital Design Archives",
+  description: "Browse our complete catalog of curated scalable vector assets, mascot logos, AI, EPS, and CorelDRAW source files.",
 };
 
 export default async function CollectionsPage({ 
@@ -48,13 +48,13 @@ export default async function CollectionsPage({
           {/* Header Banner */}
           <div className="bg-white rounded-3xl p-8 md:p-12 border border-slate-200 shadow-sm text-left space-y-4">
             <span className="text-blue-600 font-mono font-bold text-xs uppercase tracking-widest inline-block">
-              Curated Linear Series
+              Curated Vector Series
             </span>
             <h1 className="text-4xl md:text-6xl font-bold text-slate-900 leading-tight">
-              The Signature Collections
+              Vector Design Collections
             </h1>
             <p className="text-xs sm:text-sm text-slate-600 max-w-2xl leading-relaxed font-medium">
-              Explore our hand-picked series, organized by literary movement and thematic resonance. Every collection is a digital journey.
+              Explore our hand-picked vector collections, organized by design theme and creative application. Every collection includes scalable artwork and editable AI, EPS, and CDR source files.
             </p>
           </div>
 

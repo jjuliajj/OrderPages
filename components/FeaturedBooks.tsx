@@ -15,7 +15,7 @@ export default async function FeaturedBooks() {
           <div className="flex items-center gap-2">
             <Command className="w-5 h-5 text-blue-600" />
             <h2 className="font-bold text-lg text-slate-900 uppercase">
-              Featured Linear Releases ({books.length})
+              Featured Vector Releases ({books.length})
             </h2>
           </div>
           <Link

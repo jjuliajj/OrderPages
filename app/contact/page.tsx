@@ -38,10 +38,10 @@ export default function ContactPage() {
               <Mail className="w-7 h-7" />
             </div>
             <h1 className="text-3xl md:text-5xl font-newsreader font-bold text-charcoal">
-              Reader Support & Contact
+              Design Support & Contact
             </h1>
             <p className="text-xs md:text-sm font-manrope text-charcoal/60 leading-relaxed">
-              Have questions about your eBook download, order status, or archival editions? Our support team is here to assist you promptly.
+              Have questions about vector file formats (AI, EPS, CDR), license terms, or custom design assets? Our support team is here to assist you promptly.
             </p>
           </div>
 
@@ -56,8 +56,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="text-[10px] font-bold text-charcoal/40 uppercase tracking-widest font-manrope">Direct Support Email</div>
-                    <a href="mailto:support@ebookmarket.com" className="text-sm font-bold text-coral hover:underline font-manrope">
-                      support@ebookmarket.com
+                    <a href="mailto:support@orderpages.com" className="text-sm font-bold text-coral hover:underline font-manrope">
+                      support@orderpages.com
                     </a>
                   </div>
                 </div>
@@ -104,7 +104,7 @@ export default function ContactPage() {
                     </div>
                     <h3 className="text-2xl font-newsreader font-bold text-charcoal">Message Sent Successfully!</h3>
                     <p className="text-xs font-manrope text-charcoal/60 max-w-md mx-auto leading-relaxed">
-                      Thank you for contacting eBookMarket Library. Our support desk has received your request and will reply to <strong>{formData.email}</strong> within 24 hours.
+                      Thank you for contacting OrderPages. Our design support team has received your message and will reply to <strong>{formData.email}</strong> within 24 hours.
                     </p>
                     <button
                       onClick={() => setSubmitted(false)}
@@ -149,7 +149,7 @@ export default function ContactPage() {
                       <input
                         required
                         type="text"
-                        placeholder="Order Inquiry / EPUB Download Question"
+                        placeholder="Order Inquiry / Vector File Download Question"
                         value={formData.subject}
                         onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                         className="w-full bg-white border border-charcoal/15 rounded-xl px-4 py-2.5 text-sm font-manrope text-charcoal focus:outline-none focus:ring-2 focus:ring-coral/20 focus:border-coral transition-all"

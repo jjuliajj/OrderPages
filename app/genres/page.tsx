@@ -7,8 +7,8 @@ import { BookOpen, Sparkles, Compass, ArrowRight, Layers, Bookmark } from "lucid
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Browse by Literary Genre",
-  description: "Explore curated e-books categorized by philosophy, non-fiction, fiction, poetry, and classic literature.",
+  title: "Browse by Design Category",
+  description: "Explore curated vector designs categorized by mascot logos, promotional graphics, emblems, print templates, and apparel art.",
 };
 
 export default async function GenresPage() {
@@ -37,13 +37,13 @@ export default async function GenresPage() {
           <div className="bg-white rounded-3xl p-8 md:p-10 border border-slate-200 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
             <div className="space-y-3 max-w-3xl">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-blue-700 text-xs font-mono font-bold rounded-full border border-blue-200 uppercase tracking-widest">
-                <Compass className="w-3.5 h-3.5" /> Literary Landscape
+                <Compass className="w-3.5 h-3.5" /> Design Directory
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
-                Explore by <span className="text-blue-600 italic font-normal">Genre</span>
+                Explore by <span className="text-blue-600 italic font-normal">Category</span>
               </h1>
               <p className="text-xs md:text-sm text-slate-600 leading-relaxed font-medium">
-                From philosophical inquiry to speculative fiction, discover curated literature organized by literary genre and subject matter.
+                From mascot logos to holiday promotional vectors and print graphics, discover curated assets organized by category and creative needs.
               </p>
             </div>
           </div>

@@ -37,12 +37,12 @@ export default function PrivacyPage() {
                 <Database className="w-5 h-5 text-coral" /> 1. Information We Collect
               </h2>
               <p>
-                At <strong>eBookMarket Library</strong>, we collect only the essential personal information required to process your orders and deliver your purchased digital EPUB files:
+                At <strong>OrderPages</strong>, we collect only the essential personal information required to process your orders and deliver your purchased digital design files and vector archives:
               </p>
               <ul className="list-disc pl-5 space-y-1.5 text-xs text-charcoal/70">
-                <li><strong>Customer Contact Details:</strong> Email address (used strictly for order confirmation and EPUB download link delivery).</li>
+                <li><strong>Customer Contact Details:</strong> Email address (used strictly for order confirmation and vector download link delivery).</li>
                 <li><strong>Billing Information:</strong> Name, billing ZIP/Postal code (used for credit card fraud prevention verification).</li>
-                <li><strong>Transaction History:</strong> Details of purchased titles, order timestamps, and transaction IDs.</li>
+                <li><strong>Transaction History:</strong> Details of purchased design files, order timestamps, and transaction IDs.</li>
               </ul>
             </section>
 
@@ -54,7 +54,7 @@ export default function PrivacyPage() {
                 We prioritize your financial security. All credit card, debit card, Apple Pay, and Google Pay transactions are encrypted and processed through <strong>Stripe Payment Gateway</strong>. 
               </p>
               <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-4 text-xs text-emerald-900 font-medium">
-                <strong>Zero Card Storage Guarantee:</strong> eBookMarket Library does not store, transmit, or have access to your full credit card numbers. All payment data is tokenized securely via Stripe.
+                <strong>Zero Card Storage Guarantee:</strong> OrderPages does not store, transmit, or have access to your full credit card numbers. All payment data is tokenized securely via Stripe.
               </div>
             </section>
 
@@ -79,7 +79,7 @@ export default function PrivacyPage() {
                 <li>Right to request complete deletion of your account/email records from our system.</li>
               </ul>
               <p className="pt-2">
-                To exercise any data privacy rights, simply send an email to <a href="mailto:support@ebookmarket.com" className="text-coral font-bold hover:underline">support@ebookmarket.com</a>.
+                To exercise any data privacy rights, simply send an email to <a href="mailto:support@orderpages.com" className="text-coral font-bold hover:underline">support@orderpages.com</a>.
               </p>
             </section>
 

@@ -37,7 +37,7 @@ export default function RefundPage() {
                 <CheckCircle2 className="w-5 h-5 text-emerald-600" /> 100% Customer Satisfaction Guarantee
               </h3>
               <p className="text-xs leading-relaxed text-emerald-900">
-                At eBookMarket Library, we stand behind the quality of our archival digital collections. If you experience any issues with your digital book download, we offer a <strong>7-Day Money-Back Guarantee</strong>.
+                At OrderPages, we stand behind the quality of our digital vector collections and source archives. If you experience any technical issues with your downloaded design files, we offer a <strong>7-Day Money-Back Guarantee</strong>.
               </p>
             </div>
 
@@ -53,7 +53,7 @@ export default function RefundPage() {
                     <AlertCircle className="w-4 h-4 text-coral" /> File Corruption
                   </div>
                   <p className="text-[11px] text-charcoal/60">
-                    The downloaded EPUB/PDF file is corrupted, unreadable, or cannot be opened by standard e-Readers.
+                    The downloaded vector archive is corrupted, unreadable, or cannot be opened in compatible software (Adobe Illustrator, CorelDRAW, or standard vector tools).
                   </p>
                 </div>
 
@@ -62,7 +62,7 @@ export default function RefundPage() {
                     <AlertCircle className="w-4 h-4 text-coral" /> Content Mismatch
                   </div>
                   <p className="text-[11px] text-charcoal/60">
-                    The content inside the file substantially differs from the title and summary listed on the store.
+                    The content inside the design archive substantially differs from the preview graphics and description listed on the store.
                   </p>
                 </div>
 
@@ -71,7 +71,7 @@ export default function RefundPage() {
                     <AlertCircle className="w-4 h-4 text-coral" /> Duplicate Purchase
                   </div>
                   <p className="text-[11px] text-charcoal/60">
-                    You accidentally completed a duplicate purchase for the exact same eBook volume.
+                    You accidentally completed a duplicate purchase for the exact same vector asset package.
                   </p>
                 </div>
               </div>
@@ -83,7 +83,7 @@ export default function RefundPage() {
               </h2>
               <p>Requesting a refund is simple and fast. Follow these steps:</p>
               <ol className="list-decimal pl-5 space-y-2 text-xs text-charcoal/80">
-                <li>Send an email to <a href="mailto:support@ebookmarket.com" className="text-coral font-bold hover:underline">support@ebookmarket.com</a>.</li>
+                <li>Send an email to <a href="mailto:support@orderpages.com" className="text-coral font-bold hover:underline">support@orderpages.com</a>.</li>
                 <li>Include your <strong>Order Email Address</strong> or <strong>Stripe Transaction ID</strong>.</li>
                 <li>Briefly describe the issue (e.g. file error or duplicate order).</li>
               </ol>
@@ -97,7 +97,7 @@ export default function RefundPage() {
                 3. Direct Resolution & Support First
               </h2>
               <p className="text-xs leading-relaxed text-charcoal/70">
-                We are committed to resolving any order issues promptly. If you encounter any problems with your purchase, please contact our support desk directly at <a href="mailto:support@ebookmarket.com" className="text-coral font-bold hover:underline">support@ebookmarket.com</a> prior to contacting your card issuer. We guarantee a fast and satisfactory resolution.
+                We are committed to resolving any order issues promptly. If you encounter any problems with your purchase, please contact our support desk directly at <a href="mailto:support@orderpages.com" className="text-coral font-bold hover:underline">support@orderpages.com</a> prior to contacting your card issuer. We guarantee a fast and satisfactory resolution.
               </p>
             </section>
 

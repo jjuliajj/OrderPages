@@ -2,10 +2,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AddToCartActions from "@/components/AddToCartActions";
 import BookDescription from "@/components/BookDescription";
+import ProductImageFrame from "@/components/ProductImageFrame";
 import { getBook } from "@/lib/api";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, BookOpen, Layers, User, Tag } from "lucide-react";
+import { ArrowLeft, Layers, User, Tag } from "lucide-react";
 import type { Metadata } from "next";
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
@@ -14,20 +15,20 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
   if (!book) {
     return {
-      title: "Book Not Found | eBookMarket Library",
+      title: "Design Asset Not Found | OrderPages",
     };
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://bookpatr.vercel.app";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.layerbit.fit";
   const rawDesc = (book.description || "").replace(/<[^>]*>?/gm, "").trim();
-  const cleanDescription = rawDesc.slice(0, 160) || `Download ${book.title} by ${book.author} in digital EPUB format from eBookMarket Library.`;
+  const cleanDescription = rawDesc.slice(0, 160) || `Download ${book.title} in scalable vector formats (AI, EPS, CDR) from OrderPages.`;
 
   return {
-    title: `${book.title} by ${book.author}`,
+    title: `${book.title} | OrderPages Vector Assets`,
     description: cleanDescription,
-    keywords: [book.title, book.author, book.category, "EPUB eBook", "Digital Book", "Buy eBook"],
+    keywords: [book.title, book.author, book.category, "Vector Design", "AI Vector", "EPS File", "CorelDRAW CDR"],
     openGraph: {
-      title: `${book.title} by ${book.author}`,
+      title: `${book.title} | OrderPages Vector Assets`,
       description: cleanDescription,
       url: `${siteUrl}/products/${book.id}`,
       type: "article",
@@ -35,7 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     },
     twitter: {
       card: "summary_large_image",
-      title: `${book.title} by ${book.author}`,
+      title: `${book.title} | OrderPages Vector Assets`,
       description: cleanDescription,
       images: book.cover_url ? [book.cover_url] : [],
     },
@@ -50,9 +51,12 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
     notFound();
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://bookpatr.vercel.app";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.layerbit.fit";
   const rawPrice = String(book.price || "0.50").replace(/[^0-9.]/g, "");
   const numericPrice = parseFloat(rawPrice) || 0.50;
+  const formattedDisplayPrice = book.price 
+    ? (book.price.startsWith("$") ? book.price : `$${book.price}`) 
+    : `$${numericPrice.toFixed(2)}`;
   const cleanDescription = (book.description || "").replace(/<[^>]*>?/gm, "").trim();
 
   // Product Schema for Google Search & Stripe Trust verification
@@ -73,7 +77,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
       "availability": "https://schema.org/InStock",
       "seller": {
         "@type": "Organization",
-        "name": "eBookMarket Library"
+        "name": "OrderPages Design Assets"
       }
     },
     "brand": {
@@ -91,40 +95,31 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
       <Navbar />
       
       <section className="pt-28 pb-20">
-        <div className="container mx-auto px-6 md:px-12 max-w-5xl">
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 max-w-6xl">
           {/* Back link */}
           <Link href="/collections" className="inline-flex items-center text-xs font-manrope font-bold text-charcoal/50 hover:text-coral transition-colors mb-8 uppercase tracking-widest gap-2 group">
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-            Back to Collection
+            Back to Vector Catalogue
           </Link>
 
-          {/* Main Book Detail Grid */}
-          <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-6 md:p-10 border border-charcoal/10 shadow-sm grid md:grid-cols-12 gap-8 lg:gap-12 items-start">
+          {/* Main Product Detail Grid (Optimized for both landscape and portrait graphics) */}
+          <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-6 md:p-10 border border-charcoal/10 shadow-sm grid md:grid-cols-12 gap-8 lg:gap-12 items-start">
             
-            {/* Left: Compact 9:16 Book Cover */}
-            <div className="md:col-span-5 flex justify-center">
-              <div className="relative aspect-[9/16] w-full max-w-[300px] bg-charcoal/5 rounded-2xl overflow-hidden shadow-lg border border-charcoal/10 group">
-                {book.cover_url ? (
-                  <img
-                    src={book.cover_url}
-                    alt={book.title}
-                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
-                  />
-                ) : (
-                  <div className="w-full h-full flex flex-col items-center justify-center bg-charcoal/10 text-charcoal/30 font-newsreader text-xl italic p-6 text-center">
-                    <BookOpen className="w-8 h-8 mb-2 opacity-40" />
-                    <span>{book.title}</span>
-                  </div>
-                )}
-              </div>
+            {/* Left: Adaptive Product Image Frame (Auto-adjusts for landscape, portrait, and square) */}
+            <div className="md:col-span-6 lg:col-span-6 flex justify-center w-full">
+              <ProductImageFrame
+                src={book.cover_url}
+                title={book.title}
+                category={book.category}
+              />
             </div>
 
-            {/* Right: Book Meta & Info */}
-            <div className="md:col-span-7 space-y-6">
+            {/* Right: Product Meta & Info */}
+            <div className="md:col-span-6 lg:col-span-6 space-y-6">
               <div>
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-coral/10 text-coral text-xs font-manrope font-bold uppercase tracking-widest rounded-full mb-3">
                   <Tag className="w-3 h-3" />
-                  {book.category}
+                  {book.category || "Vector Design"}
                 </div>
                 
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-newsreader font-bold text-charcoal leading-tight mb-2">
@@ -133,19 +128,19 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
                 
                 <div className="flex items-center gap-2 text-sm text-charcoal/60 font-manrope">
                   <User className="w-4 h-4 text-coral" />
-                  <span>By <strong className="text-charcoal">{book.author}</strong></span>
+                  <span>By <strong className="text-charcoal">{book.author || "OrderPages Studio"}</strong></span>
                 </div>
               </div>
 
               {/* Price & Delivery Badge */}
               <div className="bg-paper-beige/60 p-4 rounded-2xl border border-charcoal/10 flex items-center justify-between">
                 <div>
-                  <span className="text-[10px] font-manrope font-bold uppercase tracking-widest text-charcoal/40 block">Digital Edition</span>
-                  <span className="text-2xl font-newsreader font-bold text-coral">{book.price || "$0.50"}</span>
+                  <span className="text-[10px] font-manrope font-bold uppercase tracking-widest text-charcoal/40 block">Vector Package</span>
+                  <span className="text-2xl font-newsreader font-bold text-coral">{formattedDisplayPrice}</span>
                 </div>
                 <div className="text-right">
                   <span className="text-xs font-manrope font-semibold text-emerald-600 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full inline-flex items-center gap-1">
-                    <Layers className="w-3 h-3" /> Instant Download
+                    <Layers className="w-3 h-3" /> Instant Digital Archive
                   </span>
                 </div>
               </div>

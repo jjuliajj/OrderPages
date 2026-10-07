@@ -34,31 +34,31 @@ export default function TermsPage() {
             
             <section className="space-y-3">
               <h2 className="text-xl font-newsreader font-bold text-charcoal flex items-center gap-2 border-b border-charcoal/10 pb-3">
-                <BookOpen className="w-5 h-5 text-coral" /> 1. Digital Copyright & Ownership
+                <BookOpen className="w-5 h-5 text-coral" /> 1. Digital Vector Copyright & Ownership
               </h2>
               <p>
-                All digital books, EPUB files, PDF archives, cover art, and editorial literature available on <strong>eBookMarket Library</strong> are protected by United States and International copyright laws. All titles remain the sole intellectual property of their respective authors and publishers.
+                All digital vector files, CorelDRAW (CDR) files, Adobe Illustrator (AI) files, EPS vectors, and design archives available on <strong>OrderPages</strong> are protected by United States and International copyright laws. All original artworks remain the intellectual property of their respective creators and design studios.
               </p>
             </section>
 
             <section className="space-y-3">
               <h2 className="text-xl font-newsreader font-bold text-charcoal flex items-center gap-2 border-b border-charcoal/10 pb-3">
-                <Lock className="w-5 h-5 text-coral" /> 2. Personal Non-Transferable License
+                <Lock className="w-5 h-5 text-coral" /> 2. Commercial & Creative Project License
               </h2>
               <p>
-                Upon purchasing an eBook volume from eBookMarket Library, you are granted a single-user, non-exclusive, non-transferable personal license to download, read, and store the digital file on your personal devices (e.g., e-Readers, tablets, mobile devices, and personal computers).
+                Upon purchasing a vector asset package from OrderPages, you are granted a non-exclusive, non-transferable commercial license to use, edit, and incorporate the vector designs into your physical print projects, logos, apparel, banners, signs, advertising, and client branding materials.
               </p>
               <p className="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-xs text-amber-900 font-medium">
-                <strong>Restrictions:</strong> You may not copy, share, redistribute, resell, broadcast, torrent, or upload purchased files to any file-sharing network, website, or public directory.
+                <strong>Restrictions:</strong> You may not redistribute, resell, sub-license, broadcast, torrent, or share the original raw source files (CDR, AI, EPS) on any stock marketplace, file-sharing network, or public repository.
               </p>
             </section>
 
             <section className="space-y-3">
               <h2 className="text-xl font-newsreader font-bold text-charcoal flex items-center gap-2 border-b border-charcoal/10 pb-3">
-                <ShieldCheck className="w-5 h-5 text-coral" /> 3. Instant Digital Delivery & Access
+                <ShieldCheck className="w-5 h-5 text-coral" /> 3. Instant Digital Archive Delivery
               </h2>
               <p>
-                Digital purchases are processed instantly via our secure checkout gateway. Access to EPUB and PDF download links is made available immediately after payment confirmation. Download links remain accessible for your personal library retrieval.
+                Digital purchases are processed instantly via our secure checkout gateway. Access to password-protected archives containing AI, EPS, and CDR source files is delivered immediately after payment confirmation.
               </p>
             </section>
 
@@ -73,10 +73,10 @@ export default function TermsPage() {
 
             <section className="space-y-3">
               <h2 className="text-xl font-newsreader font-bold text-charcoal flex items-center gap-2 border-b border-charcoal/10 pb-3">
-                5. Questions & Inquiries
+                5. Questions & Licensing Inquiries
               </h2>
               <p>
-                If you have questions regarding these Terms of Service or digital licensing agreements, please reach out to our dedicated support team at <a href="mailto:support@ebookmarket.com" className="text-coral font-bold hover:underline">support@ebookmarket.com</a>.
+                If you have questions regarding these Terms of Service or extended commercial licensing agreements, please reach out to our dedicated support team at <a href="mailto:support@orderpages.com" className="text-coral font-bold hover:underline">support@orderpages.com</a>.
               </p>
             </section>
 

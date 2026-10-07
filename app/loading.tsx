@@ -12,10 +12,10 @@ export default function GlobalLoading() {
           <span className="absolute -top-1 -right-1 w-4 h-4 bg-coral rounded-full animate-ping" />
         </div>
         <h2 className="text-xl font-newsreader font-bold text-charcoal mb-1">
-          eBookMarket <span className="text-coral italic font-normal">Library</span>
+          OrderPages <span className="text-[#FF4500] italic font-normal">Vectors</span>
         </h2>
         <p className="text-xs font-manrope font-semibold text-charcoal/40 uppercase tracking-widest mb-4">
-          Fetching digital archives...
+          Loading vector design archives...
         </p>
 
         {/* Shimmering Coral Progress Bar */}

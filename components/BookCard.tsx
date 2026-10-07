@@ -35,31 +35,41 @@ export default function BookCard({ id, title, author, price, category, image }: 
       {/* Top Floating Badge */}
       <div className="flex items-center justify-between gap-1 mb-2.5 z-10">
         <span className="bg-blue-50 text-blue-700 text-[10px] font-mono font-bold px-2 py-0.5 rounded border border-blue-200">
-          ISBN-978-{id.slice(0, 4)}
+          VECTOR #{id.slice(0, 4)}
         </span>
         <span className="text-[10px] font-bold text-slate-600 bg-slate-100 px-2 py-0.5 rounded uppercase border border-slate-200">
-          {category || "LINEAR"}
+          {category || "VECTOR"}
         </span>
       </div>
 
-      {/* Book Cover Container */}
-      <div className="flex justify-center mb-3">
-        <Link href={`/products/${id}`} className="block relative group/cover overflow-hidden rounded-xl bg-slate-100 border border-slate-200 aspect-[3/4] max-h-64 w-full max-w-[190px] shadow-sm">
+      {/* Vector Asset Image Container (Adaptive 4:3 with ambient backdrop) */}
+      <div className="w-full mb-3">
+        <Link 
+          href={`/products/${id}`} 
+          className="block relative group/cover overflow-hidden rounded-xl bg-slate-100/90 border border-slate-200 aspect-[4/3] w-full shadow-xs flex items-center justify-center p-2.5"
+        >
           {image ? (
-            <img
-              src={image}
-              alt={title}
-              className="w-full h-full object-cover group-hover/cover:scale-105 transition-transform duration-500"
-            />
+            <>
+              {/* Ambient backdrop for letterboxed landscape/portrait graphics */}
+              <div 
+                className="absolute inset-0 bg-cover bg-center blur-md opacity-25 scale-110 pointer-events-none"
+                style={{ backgroundImage: `url(${image})` }}
+              />
+              <img
+                src={image}
+                alt={title}
+                className="relative z-10 max-w-full max-h-full object-contain rounded-lg drop-shadow-xs group-hover/cover:scale-105 transition-transform duration-300"
+              />
+            </>
           ) : (
             <div className="w-full h-full flex flex-col items-center justify-center p-4 text-center text-slate-400 bg-slate-100">
-              <BookOpen className="w-8 h-8 mb-2 opacity-40 text-blue-600" />
+              <Sparkles className="w-8 h-8 mb-2 opacity-40 text-blue-600" />
               <span className="text-xs font-bold italic line-clamp-2 text-slate-600">{title}</span>
             </div>
           )}
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover/cover:opacity-100 transition-opacity flex items-end p-3">
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover/cover:opacity-100 transition-opacity flex items-end p-2.5 z-20">
             <span className="text-[10px] font-extrabold text-blue-300 uppercase tracking-widest flex items-center gap-1">
-              <Sparkles className="w-3 h-3 text-blue-400" /> Read Preview
+              <Sparkles className="w-3 h-3 text-blue-400" /> View Vector Asset
             </span>
           </div>
         </Link>
@@ -85,7 +95,7 @@ export default function BookCard({ id, title, author, price, category, image }: 
               {formattedPrice}
             </span>
             <span className="text-[10px] font-mono font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
-              DRM-Free
+              AI • EPS • CDR
             </span>
           </div>
 

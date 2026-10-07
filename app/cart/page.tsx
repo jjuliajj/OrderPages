@@ -34,15 +34,15 @@ export default function CartPage() {
             <div>
               <Link href="/collections" className="inline-flex items-center text-xs font-extrabold text-[#FF4500] hover:text-black transition-colors mb-2 uppercase tracking-widest gap-2">
                 <ArrowLeft className="w-4 h-4" />
-                Back to Swiss Index
+                Back to Vector Index
               </Link>
               <h1 className="text-3xl md:text-5xl font-extrabold text-black uppercase tracking-tighter flex items-center gap-3">
                 <ShoppingBag className="w-8 h-8 text-[#FF4500]" />
-                Folio Shopping Cart
+                Design Assets Cart
               </h1>
             </div>
             <span className="text-xs font-black text-black bg-[#F0F0F0] px-4 py-2 border-2 border-black w-fit uppercase">
-              {fullCartItems.length} {fullCartItems.length === 1 ? 'Selected Item' : 'Selected Items'}
+              {fullCartItems.length} {fullCartItems.length === 1 ? 'Selected Asset' : 'Selected Assets'}
             </span>
           </div>
 
@@ -52,12 +52,12 @@ export default function CartPage() {
                 <ShoppingBag className="w-8 h-8 text-[#FF4500]" />
               </div>
               <h3 className="text-2xl font-extrabold text-black uppercase mb-2">Cart is Empty</h3>
-              <p className="text-xs text-black/70 mb-6 font-sans">Browse structured Swiss modernist page folios and digital EPUB books.</p>
+              <p className="text-xs text-black/70 mb-6 font-sans">Browse curated vector collections, mascot logos, and editable AI & CorelDRAW design packages.</p>
               <Link 
                 href="/collections" 
                 className="inline-flex items-center gap-2 bg-[#FF4500] hover:bg-black text-white border-2 border-black px-8 py-3.5 font-bold text-xs uppercase tracking-wider transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
               >
-                <span>Explore Folio Index</span>
+                <span>Explore Vector Index</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -70,9 +70,9 @@ export default function CartPage() {
                     key={item.id} 
                     className="bg-white p-4 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:border-[#FF4500] transition-all flex gap-4 items-center"
                   >
-                    <Link href={`/products/${item.id}`} className="w-16 md:w-20 aspect-[9/16] bg-[#F0F0F0] overflow-hidden flex-shrink-0 border-2 border-black block">
+                    <Link href={`/products/${item.id}`} className="w-16 md:w-24 aspect-[4/3] bg-slate-100 rounded-lg overflow-hidden flex-shrink-0 border-2 border-black block p-1">
                       {item.cover_url ? (
-                        <img src={item.cover_url} alt={item.title} className="object-cover w-full h-full" />
+                        <img src={item.cover_url} alt={item.title} className="object-contain w-full h-full" />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center text-black text-[9px] font-bold">
                           {item.title}

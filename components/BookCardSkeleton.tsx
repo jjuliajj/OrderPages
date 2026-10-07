@@ -6,8 +6,8 @@ export default function BookCardSkeleton({ count = 6 }: { count?: number }) {
           key={i} 
           className="bg-white/60 backdrop-blur-sm border border-charcoal/10 rounded-2xl p-3 shadow-xs animate-pulse flex flex-col h-full"
         >
-          {/* 9:16 Cover Skeleton */}
-          <div className="aspect-[9/16] mb-3 bg-charcoal/10 rounded-xl w-full flex items-center justify-center relative overflow-hidden">
+          {/* 4:3 Cover Skeleton */}
+          <div className="aspect-[4/3] mb-3 bg-charcoal/10 rounded-xl w-full flex items-center justify-center relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full animate-[shimmer_1.5s_infinite]" />
           </div>
 
